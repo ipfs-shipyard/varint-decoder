@@ -1,6 +1,6 @@
 {
   "name": "varint-decoder",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parse all the varints in a Buffer (for when there are varints everywhere)",
   "scripts": {
     "lint": "aegir-lint",
