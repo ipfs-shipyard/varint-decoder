@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/diasdavid/varint-decoder/issues"
   },
-  "homepage": "https://github.com/diasdavid/varint-decoder#readme"
+  "homepage": "https://github.com/diasdavid/varint-decoder#readme",
+  "contributors": [
+    "David Dias <daviddias.p@gmail.com>"
+  ]
 }
