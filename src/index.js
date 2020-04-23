@@ -1,13 +1,14 @@
 'use strict'
 
 const varint = require('varint')
+const isBuffer = require('is-buffer')
 
 module.exports = (buf) => {
-  if (!Buffer.isBuffer(buf)) {
+  if (!isBuffer(buf)) {
     throw new Error('arg needs to be a buffer')
   }
 
-  let result = []
+  const result = []
 
   while (buf.length > 0) {
     const num = varint.decode(buf)
