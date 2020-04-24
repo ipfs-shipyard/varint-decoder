@@ -1,6 +1,6 @@
 {
   "name": "varint-decoder",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Parse all the varints in a Buffer (for when there are varints everywhere)",
   "main": "src/index.js",
   "scripts": {
@@ -48,6 +48,7 @@
   },
   "homepage": "https://github.com/diasdavid/varint-decoder#readme",
   "contributors": [
-    "David Dias <daviddias.p@gmail.com>"
+    "David Dias <daviddias.p@gmail.com>",
+    "Hugo Dias <hugomrdias@gmail.com>"
   ]
 }
