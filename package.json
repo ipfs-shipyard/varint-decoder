@@ -1,6 +1,6 @@
 {
   "name": "varint-decoder",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Parse all the varints in a Buffer (for when there are varints everywhere)",
   "main": "src/index.js",
   "scripts": {
