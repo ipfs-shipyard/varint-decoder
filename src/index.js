@@ -12,7 +12,7 @@ module.exports = (buf) => {
   while (buf.length > 0) {
     const num = varint.decode(buf)
     result.push(num)
-    buf = buf.slice(varint.decode.bytes)
+    buf = buf.subarray(varint.decode.bytes)
   }
 
   return result
