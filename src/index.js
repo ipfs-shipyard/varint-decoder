@@ -1,11 +1,10 @@
 'use strict'
 
 const varint = require('varint')
-const isBuffer = require('is-buffer')
 
 module.exports = (buf) => {
-  if (!isBuffer(buf)) {
-    throw new Error('arg needs to be a buffer')
+  if (!(buf instanceof Uint8Array)) {
+    throw new Error('arg needs to be a Uint8Array')
   }
 
   const result = []
