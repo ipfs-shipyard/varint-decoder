@@ -1,8 +1,9 @@
-'use strict'
+import * as v from 'varint'
 
-const varint = require('varint')
+// @ts-expect-error types are wrong
+const varint = v.default
 
-module.exports = (buf) => {
+export function varintDecoder (buf: Uint8Array) {
   if (!(buf instanceof Uint8Array)) {
     throw new Error('arg needs to be a Uint8Array')
   }
