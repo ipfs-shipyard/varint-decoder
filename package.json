@@ -2,34 +2,33 @@
   "name": "varint-decoder",
   "version": "1.0.0",
   "description": "Parse all the varints in a Buffer (for when there are varints everywhere)",
-  "main": "src/index.js",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "lint": "aegir lint",
-    "build": "aegir build",
-    "test": "aegir test",
-    "test:node": "aegir test -t node",
-    "test:browser": "aegir test -t browser",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "aegir test -f ./dist/test/*.js",
+    "test:node": "aegir test -t node -f ./dist/test/*.js",
+    "test:browser": "aegir test -t browser-f ./dist/test/*.js ",
     "release": "aegir release",
     "release-minor": "aegir release --type minor",
     "release-major": "aegir release --type major",
-    "coverage": "aegir coverage",
-    "coverage-publish": "aegir coverage publish"
-  },
-  "engines": {
-    "node": ">=4.0.0",
-    "npm": ">=3.0.0"
+    "coverage": "nyc --reporter=text --reporter=lcov npm run test:node"
   },
   "dependencies": {
-    "varint": "^5.0.0"
+    "varint": "^6.0.0"
   },
   "devDependencies": {
-    "aegir": "^25.0.0",
-    "buffer": "^5.6.0",
-    "uint8arrays": "^1.1.0"
+    "@types/varint": "^6.0.0",
+    "aegir": "^36.0.0",
+    "buffer": "^6.0.3",
+    "uint8arrays": "^3.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diasdavid/varint-decoder.git"
+    "url": "git+https://github.com/ipfs-shipyard/varint-decoder.git"
   },
   "keywords": [
     "IPFS",
@@ -38,9 +37,9 @@
   "author": "David Dias (mail@daviddias.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diasdavid/varint-decoder/issues"
+    "url": "https://github.com/ipfs-shipyard/varint-decoder/issues"
   },
-  "homepage": "https://github.com/diasdavid/varint-decoder#readme",
+  "homepage": "https://github.com/ipfs-shipyard/varint-decoder#readme",
   "contributors": [
     "David Dias <daviddias.p@gmail.com>",
     "achingbrain <alex@achingbrain.net>",
